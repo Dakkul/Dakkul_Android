@@ -3,17 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/drawable/image_home_decoration_bg.xml" value="0.2671794871794872" />
-        <entry key="app/src/main/res/drawable/shape_home_chip_unselected.xml" value="0.2671794871794872" />
-        <entry key="app/src/main/res/drawable/shape_story_bg.xml" value="0.2671794871794872" />
-        <entry key="app/src/main/res/drawable/shape_story_tag_bg.xml" value="0.2671794871794872" />
+        <entry key="..\:/android_hyein/AndroidProject/Dakkul_Android/app/src/main/res/layout/activity_main.xml" value="0.25364583333333335" />
+        <entry key="..\:/android_hyein/AndroidProject/Dakkul_Android/app/src/main/res/layout/activity_splash.xml" value="0.25364583333333335" />
+        <entry key="..\:/android_hyein/AndroidProject/Dakkul_Android/app/src/main/res/layout/fragment_home.xml" value="0.25364583333333335" />
+        <entry key="..\:/android_hyein/AndroidProject/Dakkul_Android/app/src/main/res/layout/fragment_punch.xml" value="0.25364583333333335" />
+        <entry key="..\:/android_hyein/AndroidProject/Dakkul_Android/app/src/main/res/layout/fragment_result.xml" value="0.25364583333333335" />
+        <entry key="..\:/android_hyein/AndroidProject/Dakkul_Android/app/src/main/res/layout/fragment_story_dialog.xml" value="0.25364583333333335" />
+        <entry key="..\:/android_hyein/AndroidProject/Dakkul_Android/app/src/main/res/layout/fragment_stroy_dialog.xml" value="0.25364583333333335" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.35833333333333334" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.20912268834155973" />
-        <entry key="app/src/main/res/layout/item_home_rv.xml" value="0.7037545236110598" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11 (2)" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

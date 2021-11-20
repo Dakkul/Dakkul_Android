@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import com.example.dakkul.data.Story
 import com.example.dakkul.databinding.FragmentHomeBinding
 import com.example.dakkul.ui.home.adapter.HomeRVAdapter
+import com.example.dakkul.ui.story.StoryDialogFragment
 import com.google.android.material.chip.Chip
 
 class HomeFragment : Fragment() {
@@ -51,12 +52,21 @@ class HomeFragment : Fragment() {
         homeRVAdapter = HomeRVAdapter()
         homeRVAdapter.itemList.addAll(
             listOf(
+                // 서버에서 data 받아 와서 추가
                 Story("", "", "", testList),
                 Story("", "", "", testList),
                 Story("", "", "", testList),
                 Story("", "", "", testList)
             )
         )
+        homeRVAdapter.setItemClickListener(object :HomeRVAdapter.ItemClickListener{
+            override fun onClick(view: View, position: Int) {
+                StoryDialogFragment(id).show(
+                    parentFragmentManager,  "StoryDialogFragment"
+                )
+            }
+        })
+
         binding.rvHomeTargetList.adapter = homeRVAdapter
     }
 }
