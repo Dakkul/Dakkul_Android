@@ -62,7 +62,7 @@ class HomeFragment : Fragment() {
         initAPI()
         homeRVAdapter.setItemClickListener(object : HomeRVAdapter.ItemClickListener {
             override fun onClick(view: View, position: Int) {
-                StoryDialogFragment(position).show(
+                StoryDialogFragment(position + 1).show(
                     parentFragmentManager, "StoryDialogFragment"
                 )
             }

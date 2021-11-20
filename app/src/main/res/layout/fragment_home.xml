@@ -23,7 +23,8 @@
         android:text="오늘 복수하고 싶은\n불운 태그를 골라주세요!"
         android:textColor="#333333"
         android:textSize="24sp"
-        android:textStyle="bold"
+        android:fontFamily="@font/nanum_bold"
+        android:includeFontPadding="false"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -52,7 +53,8 @@
             android:text="#전체"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:textStyle="normal"/>
+            android:fontFamily="@font/nanum_regular"
+            android:includeFontPadding="false"/>
 
         <com.google.android.material.chip.Chip
             android:id="@+id/chip_home_1"
@@ -65,7 +67,8 @@
             android:text="#업무"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:textStyle="normal" />
+            android:fontFamily="@font/nanum_regular"
+            android:includeFontPadding="false"/>
 
         <com.google.android.material.chip.Chip
             android:id="@+id/chip_home_2"
@@ -78,7 +81,8 @@
             android:text="#멘붕"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:textStyle="normal" />
+            android:fontFamily="@font/nanum_regular"
+            android:includeFontPadding="false"/>
 
         <com.google.android.material.chip.Chip
             android:id="@+id/chip_home_3"
@@ -91,7 +95,8 @@
             android:text="#앗차"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:textStyle="normal" />
+            android:fontFamily="@font/nanum_regular"
+            android:includeFontPadding="false"/>
 
         <com.google.android.material.chip.Chip
             android:id="@+id/chip_home_4"
@@ -104,7 +109,8 @@
             android:text="#일상"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:textStyle="normal" />
+            android:fontFamily="@font/nanum_regular"
+            android:includeFontPadding="false"/>
 
         <com.google.android.material.chip.Chip
             android:id="@+id/chip_home_5"
@@ -117,7 +123,8 @@
             android:text="#통증"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:textStyle="normal" />
+            android:fontFamily="@font/nanum_regular"
+            android:includeFontPadding="false"/>
 
         <com.google.android.material.chip.Chip
             android:id="@+id/chip_home_6"
@@ -130,7 +137,8 @@
             android:text="#음식"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:textStyle="normal" />
+            android:fontFamily="@font/nanum_regular"
+            android:includeFontPadding="false"/>
 
         <com.google.android.material.chip.Chip
             android:id="@+id/chip_home_7"
@@ -143,7 +151,8 @@
             android:text="#덤벙"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:textStyle="normal" />
+            android:fontFamily="@font/nanum_regular"
+            android:includeFontPadding="false"/>
 
     </com.google.android.material.chip.ChipGroup>
 
@@ -160,6 +169,5 @@
         app:layout_constraintStart_toEndOf="@id/cg_home_tag"
         app:layout_constraintEnd_toEndOf="parent"
         />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
