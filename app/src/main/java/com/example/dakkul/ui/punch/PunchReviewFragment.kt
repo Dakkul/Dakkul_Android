@@ -56,8 +56,13 @@ class PunchReviewFragment : Fragment() {
 
         binding.btnPunchDone.setOnClickListener {
             CoroutineScope(IO).launch {
-                RetrofitBuilder.dakkulAPI.setPost(binding.etPunchReview.text.toString(),3)
+                val response = RetrofitBuilder.dakkulAPI.setPost(binding.etPunchReview.text.toString(),3)
                 withContext(Main){
+                    if(response.status==200) {
+                        findNavController().navigate(R.id.action_punchReviewFragment_to_resultFragment)
+                    }else{
+
+                    }
 
                 }
             }

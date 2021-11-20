@@ -1,5 +1,7 @@
 package com.example.dakkul.ui.story
 
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -25,7 +27,7 @@ class StoryDialogFragment(id: Int) : DialogFragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentStoryDialogBinding.inflate(layoutInflater, container, false)
-
+        dialog?.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         exitDialog()
         return binding.root
     }
