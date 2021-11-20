@@ -1,27 +1,11 @@
 package com.example.dakkul.ui.result
 
-import android.graphics.Color
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.dakkul.R
 import com.example.dakkul.databinding.FragmentResultBinding
-import android.text.SpannableString
-
-import android.text.style.RelativeSizeSpan
-
-import android.text.Spannable
-
-import android.graphics.Typeface
-
-import android.text.style.StyleSpan
-
-import android.text.style.ForegroundColorSpan
-
-
-
 
 class ResultFragment : Fragment() {
     private var _binding: FragmentResultBinding? = null
