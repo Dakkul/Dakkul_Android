@@ -32,7 +32,7 @@ class PunchReviewFragment : Fragment() {
         binding.imgBtnPunchReviewBack.setOnClickListener {
             findNavController().navigate(R.id.action_punchReviewFragment_to_homeFragment)
         }
-        
+
         binding.etPunchReview.addTextChangedListener(object :TextWatcher{
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
             }
@@ -47,6 +47,13 @@ class PunchReviewFragment : Fragment() {
             }
 
         })
+
+        binding.btnPunchDone.setOnClickListener {
+
+        }
+        binding.btnPunchReturn.setOnClickListener {
+            findNavController().popBackStack()
+        }
     }
 
 

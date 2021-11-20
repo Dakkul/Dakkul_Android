@@ -23,11 +23,11 @@
         android:id="@+id/iv_graphic"
         android:layout_width="28dp"
         android:layout_height="28dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="48dp"
+        android:src="@drawable/ic_quit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:src="@tools:sample/avatars" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_title"
@@ -56,7 +56,7 @@
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="22dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
@@ -73,9 +73,7 @@
         android:textColor="@color/dakkul_838383"
         android:lineSpacingExtra="9sp"
         android:gravity="center_horizontal"
-        tools:text="마감 10분 전, 열심히 작업 중이던 나.\n
-갑자기 화면이 재시동되는데,\n
-나.. ctrl+s 눌렀나..?"
+        tools:text="마감 10분 전, 열심히 작업 중이던 나\n갑자기 화면이 재시동되는데,\n나.. ctrl+s 눌렀나..?"
         android:layout_marginHorizontal="25dp"
         android:layout_marginTop="12dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -88,23 +86,29 @@
         android:layout_height="194dp"
         android:layout_marginHorizontal="67dp"
         android:layout_marginTop="20dp"
+        android:src="@drawable/ic_quit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_story"
-        tools:src="@tools:sample/avatars" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_story" />
 
-    <Button
-        android:id="@+id/btn_revenge"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="33dp"
-        android:layout_marginHorizontal="90dp"
-        android:text="Button"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/border_ff5c5c_20"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_wanted" />
+        app:layout_constraintTop_toBottomOf="@+id/iv_wanted">
 
+        <img
 
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img_rock"
+            tools:layout_editor_absoluteX="19dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
