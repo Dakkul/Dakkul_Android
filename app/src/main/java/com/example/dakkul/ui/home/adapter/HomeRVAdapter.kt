@@ -3,12 +3,9 @@ package com.example.dakkul.ui.home.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.findFragment
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dakkul.data.Story
 import com.example.dakkul.databinding.ItemHomeRvBinding
-import com.example.dakkul.ui.story.StoryDialogFragment
 
 class HomeRVAdapter : RecyclerView.Adapter<HomeRVAdapter.HomeViewViewHolder>() {
     val itemList = mutableListOf<Story>()
