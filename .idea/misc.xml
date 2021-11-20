@@ -15,6 +15,8 @@
         <entry key="..\:/android_hyein/AndroidProject/Dakkul_Android/app/src/main/res/layout/fragment_story_dialog.xml" value="0.2" />
         <entry key="..\:/android_hyein/AndroidProject/Dakkul_Android/app/src/main/res/layout/fragment_stroy_dialog.xml" value="0.25364583333333335" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.35833333333333334" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.27887423364907865" />
+        <entry key="app/src/main/res/layout/item_home_rv.xml" value="0.13858695652173914" />
       </map>
     </option>
   </component>
