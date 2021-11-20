@@ -29,4 +29,58 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
+    <TextView
+        android:id="@+id/tv_tag1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_marginStart="16dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:paddingStart="6dp"
+        android:paddingEnd="6dp"
+        android:background="@drawable/shape_story_tag_bg"
+        android:text="#태그1"
+        android:textSize="10sp"
+        android:textStyle="normal"
+        android:textColor="#BCBFC3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_story_content" />
+
+    <TextView
+        android:id="@+id/tv_tag2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_marginStart="3dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:paddingStart="6dp"
+        android:paddingEnd="6dp"
+        android:background="@drawable/shape_story_tag_bg"
+        android:text="#태그2"
+        android:textSize="10sp"
+        android:textStyle="normal"
+        android:textColor="#BCBFC3"
+        app:layout_constraintStart_toEndOf="@id/tv_tag1"
+        app:layout_constraintTop_toBottomOf="@id/tv_story_content" />
+
+    <TextView
+        android:id="@+id/tv_tag3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_marginStart="3dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:paddingStart="6dp"
+        android:paddingEnd="6dp"
+        android:background="@drawable/shape_story_tag_bg"
+        android:text="#태그3"
+        android:textSize="10sp"
+        android:textStyle="normal"
+        android:textColor="#BCBFC3"
+        app:layout_constraintStart_toEndOf="@id/tv_tag2"
+        app:layout_constraintTop_toBottomOf="@id/tv_story_content" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

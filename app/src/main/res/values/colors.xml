@@ -7,4 +7,12 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    
+    <color name="dakkul_ff5c5c">#ff5c5c</color>
+    <color name="dakkul_9c9c9c">#9c9c9c</color>
+    <color name="dakkul_bcbfc3">#bcbfc3</color>
+    <color name="dakkul_252525">#252525</color>
+    <color name="dakkul_f4f4f5">#f4f4f5</color>
+    <color name="dakkul_919196">#919196</color>
+
 </resources>
