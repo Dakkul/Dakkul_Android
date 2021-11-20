@@ -60,18 +60,9 @@ class HomeFragment : Fragment() {
         homeRVAdapter = HomeRVAdapter()
 
         initAPI()
-//        homeRVAdapter.itemList.addAll(
-//            listOf(
-//                // 서버에서 data 받아 와서 추가
-//                Story("", "", "", testList),
-//                Story("", "", "", testList),
-//                Story("", "", "", testList),
-//                Story("", "", "", testList)
-//            )
-//        )
         homeRVAdapter.setItemClickListener(object : HomeRVAdapter.ItemClickListener {
             override fun onClick(view: View, position: Int) {
-                StoryDialogFragment(id).show(
+                StoryDialogFragment(position).show(
                     parentFragmentManager, "StoryDialogFragment"
                 )
             }
@@ -95,6 +86,7 @@ class HomeFragment : Fragment() {
                             data
                         )
                     }
+                    homeRVAdapter.notifyDataSetChanged()
                 } else {
 
                 }
