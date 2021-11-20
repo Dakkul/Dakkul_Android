@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_homeFragment_to_punchFragment"
             app:destination="@id/punchFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_storyDialogFragment2"
+            app:destination="@id/storyDialogFragment" />
     </fragment>
     <fragment
         android:id="@+id/resultFragment"
@@ -34,4 +37,9 @@
             android:id="@+id/action_punchFragment_to_resultFragment"
             app:destination="@id/resultFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/storyDialogFragment"
+        android:name="com.example.dakkul.ui.story.StoryDialogFragment"
+        android:label="fragment_story_dialog"
+        tools:layout="@layout/fragment_story_dialog" />
 </navigation>
