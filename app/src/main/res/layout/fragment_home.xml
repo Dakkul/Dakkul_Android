@@ -47,6 +47,7 @@
             android:textStyle="normal"/>
 
         <com.google.android.material.chip.Chip
+            android:id="@+id/chip_home_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             style="@style/CustomChipChoice"
@@ -59,6 +60,7 @@
             android:textStyle="normal" />
 
         <com.google.android.material.chip.Chip
+            android:id="@+id/chip_home_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             style="@style/CustomChipChoice"
@@ -71,6 +73,7 @@
             android:textStyle="normal" />
 
         <com.google.android.material.chip.Chip
+            android:id="@+id/chip_home_3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             style="@style/CustomChipChoice"
@@ -83,6 +86,7 @@
             android:textStyle="normal" />
 
         <com.google.android.material.chip.Chip
+            android:id="@+id/chip_home_4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             style="@style/CustomChipChoice"
@@ -95,6 +99,7 @@
             android:textStyle="normal" />
 
         <com.google.android.material.chip.Chip
+            android:id="@+id/chip_home_5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             style="@style/CustomChipChoice"
@@ -107,6 +112,7 @@
             android:textStyle="normal" />
 
         <com.google.android.material.chip.Chip
+            android:id="@+id/chip_home_6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             style="@style/CustomChipChoice"
@@ -119,6 +125,7 @@
             android:textStyle="normal" />
 
         <com.google.android.material.chip.Chip
+            android:id="@+id/chip_home_7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             style="@style/CustomChipChoice"
