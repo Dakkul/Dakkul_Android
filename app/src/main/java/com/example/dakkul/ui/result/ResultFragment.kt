@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import com.example.dakkul.R
 import com.example.dakkul.databinding.FragmentResultBinding
 
@@ -18,11 +19,18 @@ class ResultFragment : Fragment() {
     ): View? {
         _binding = FragmentResultBinding.inflate(layoutInflater, container, false)
 
+        btnClickSet()
         return binding.root
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    private fun btnClickSet(){
+        binding.ivRevengeEnd.setOnClickListener {
+            Navigation.createNavigateOnClickListener(R.id.homeFragment, null)
+        }
     }
 }
