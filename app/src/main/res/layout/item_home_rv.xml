@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="178dp"
+    android:layout_marginBottom="16dp"
+    android:background="@drawable/shape_story_bg"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tv_story_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="문지방에\n발 찧었다...\n아... 아...!"
+        android:textStyle="normal"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_story_image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:src="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_tag1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_marginStart="16dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:paddingStart="6dp"
+        android:paddingEnd="6dp"
+        android:background="@drawable/shape_story_tag_bg"
+        android:text="#태그1"
+        android:textSize="10sp"
+        android:textStyle="normal"
+        android:textColor="#BCBFC3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_story_content" />
+
+    <TextView
+        android:id="@+id/tv_tag2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_marginStart="3dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:paddingStart="6dp"
+        android:paddingEnd="6dp"
+        android:background="@drawable/shape_story_tag_bg"
+        android:text="#태그2"
+        android:textSize="10sp"
+        android:textStyle="normal"
+        android:textColor="#BCBFC3"
+        app:layout_constraintStart_toEndOf="@id/tv_tag1"
+        app:layout_constraintTop_toBottomOf="@id/tv_story_content" />
+
+    <TextView
+        android:id="@+id/tv_tag3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_marginStart="3dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:paddingStart="6dp"
+        android:paddingEnd="6dp"
+        android:background="@drawable/shape_story_tag_bg"
+        android:text="#태그3"
+        android:textSize="10sp"
+        android:textStyle="normal"
+        android:textColor="#BCBFC3"
+        app:layout_constraintStart_toEndOf="@id/tv_tag2"
+        app:layout_constraintTop_toBottomOf="@id/tv_story_content" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
