@@ -2,8 +2,8 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:state_checked="true"
-        android:drawable="@drawable/shape_home_chip_selected"/>
+        android:color="#FF5C5C"/>
     <item
         android:state_checked="false"
-        android:drawable="@drawable/shape_home_chip_unselected"/>
+        android:color="#B1B1B1" />
 </selector>

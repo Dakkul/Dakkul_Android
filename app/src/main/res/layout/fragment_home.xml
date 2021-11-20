@@ -21,90 +21,114 @@
 
     <com.google.android.material.chip.ChipGroup
         android:id="@+id/cg_home_tag"
-        android:layout_width="90dp"
+        android:layout_width="72dp"
         android:layout_height="0dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="29dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginEnd="42dp"
+        app:chipSpacingVertical="16dp"
         app:layout_constraintTop_toBottomOf="@+id/tv_home_title"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/rv_home_target_list">
 
         <com.google.android.material.chip.Chip
-            style="@style/Widget.MaterialComponents.Chip.Choice"
             android:id="@+id/chip_home_all"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:checked="true"
+            style="@style/CustomChipChoice"
+            app:chipCornerRadius="8dp"
+            app:chipMinTouchTargetSize="0dp"
+            app:rippleColor="#FF5C5C"
             android:text="#전체"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="normal"/>
 
         <com.google.android.material.chip.Chip
-            style="@style/Widget.MaterialComponents.Chip.Choice"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            style="@style/CustomChipChoice"
+            app:chipCornerRadius="8dp"
+            app:chipMinTouchTargetSize="0dp"
+            app:rippleColor="#FF5C5C"
             android:text="#업무"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="normal" />
 
         <com.google.android.material.chip.Chip
-            style="@style/Widget.MaterialComponents.Chip.Choice"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            style="@style/CustomChipChoice"
+            app:chipCornerRadius="8dp"
+            app:chipMinTouchTargetSize="0dp"
+            app:rippleColor="#FF5C5C"
             android:text="#멘붕"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="normal" />
 
         <com.google.android.material.chip.Chip
-            style="@style/Widget.MaterialComponents.Chip.Choice"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="#아차차"
+            style="@style/CustomChipChoice"
+            app:chipCornerRadius="8dp"
+            app:chipMinTouchTargetSize="0dp"
+            app:rippleColor="#FF5C5C"
+            android:text="#앗차"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="normal" />
 
         <com.google.android.material.chip.Chip
-            style="@style/Widget.MaterialComponents.Chip.Choice"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            style="@style/CustomChipChoice"
+            app:chipCornerRadius="8dp"
+            app:chipMinTouchTargetSize="0dp"
+            app:rippleColor="#FF5C5C"
             android:text="#일상"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="normal" />
 
         <com.google.android.material.chip.Chip
-            style="@style/Widget.MaterialComponents.Chip.Choice"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            style="@style/CustomChipChoice"
+            app:chipCornerRadius="8dp"
+            app:chipMinTouchTargetSize="0dp"
+            app:rippleColor="#FF5C5C"
             android:text="#통증"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="normal" />
 
         <com.google.android.material.chip.Chip
-            style="@style/Widget.MaterialComponents.Chip.Choice"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            style="@style/CustomChipChoice"
+            app:chipCornerRadius="8dp"
+            app:chipMinTouchTargetSize="0dp"
+            app:rippleColor="#FF5C5C"
             android:text="#음식"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="normal" />
 
         <com.google.android.material.chip.Chip
-            style="@style/Widget.MaterialComponents.Chip.Choice"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            style="@style/CustomChipChoice"
+            app:chipCornerRadius="8dp"
+            app:chipMinTouchTargetSize="0dp"
+            app:rippleColor="#FF5C5C"
             android:text="#덤벙"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="normal" />
-
 
     </com.google.android.material.chip.ChipGroup>
 
@@ -114,7 +138,7 @@
         android:layout_height="0dp"
         android:layout_marginTop="25dp"
         android:layout_marginEnd="20dp"
-        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintTop_toBottomOf="@id/tv_home_title"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@id/cg_home_tag"
