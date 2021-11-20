@@ -7,7 +7,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitBuilder {
 
-    private const val BaseUrl = ""
+    private const val BaseUrl = "https://asia-northeast3-dakkul-bd6c8.cloudfunctions.net"
 
     private fun getRetrofit(): Retrofit {
         return Retrofit.Builder()
