@@ -23,21 +23,22 @@ class PunchReviewFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentPunchReviewBinding.inflate(inflater,container,false)
+        setListeners()
         return binding.root
     }
 
-    fun setListeners(){
+    private fun setListeners(){
         binding.etPunchReview.addTextChangedListener(object :TextWatcher{
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                TODO("Not yet implemented")
             }
 
-            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                TODO("Not yet implemented")
+            override fun onTextChanged(s: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                var userinput = binding.etPunchReview.text.toString()
+                binding.tvPunchReviewCount.text = userinput.length.toString()
             }
 
             override fun afterTextChanged(p0: Editable?) {
-                TODO("Not yet implemented")
+
             }
 
         })
