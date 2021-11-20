@@ -9,7 +9,7 @@ data class StoryResponse(
     data class Data(
         val id: Int,
         val title: String,
-        val emoji: String,
+        val imageBefore: String,
         val tags: List<Tag>
     ) {
         data class Tag(
