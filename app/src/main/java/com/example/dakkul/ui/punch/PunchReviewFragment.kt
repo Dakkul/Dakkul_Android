@@ -10,8 +10,14 @@ import android.view.ViewGroup
 import androidx.core.widget.addTextChangedListener
 import androidx.navigation.fragment.findNavController
 import com.example.dakkul.R
+import com.example.dakkul.data.RetrofitBuilder
 import com.example.dakkul.databinding.FragmentPunchBinding
 import com.example.dakkul.databinding.FragmentPunchReviewBinding
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers.IO
+import kotlinx.coroutines.Dispatchers.Main
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 
 class PunchReviewFragment : Fragment() {
@@ -49,6 +55,14 @@ class PunchReviewFragment : Fragment() {
         })
 
         binding.btnPunchDone.setOnClickListener {
+            CoroutineScope(IO).launch {
+                RetrofitBuilder.dakkulAPI.setPost(binding.etPunchReview.text.toString(),3)
+                withContext(Main){
+
+                }
+            }
+
+
 
         }
         binding.btnPunchReturn.setOnClickListener {

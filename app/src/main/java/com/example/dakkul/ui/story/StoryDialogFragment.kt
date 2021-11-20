@@ -26,6 +26,7 @@ class StoryDialogFragment(id: Int) : DialogFragment() {
     ): View? {
         _binding = FragmentStoryDialogBinding.inflate(layoutInflater, container, false)
 
+        exitDialog()
         return binding.root
     }
 
@@ -40,5 +41,11 @@ class StoryDialogFragment(id: Int) : DialogFragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    private fun exitDialog(){
+        binding.ivQuit.setOnClickListener {
+            dismiss()
+        }
     }
 }

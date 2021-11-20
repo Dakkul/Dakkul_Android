@@ -100,7 +100,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/btn_punch_return"
-        android:layout_width="118dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginBottom="24dp"
@@ -124,6 +124,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="15dp"
+            android:layout_marginStart="2dp"
             android:fontFamily="@font/nanum_bold"
             android:includeFontPadding="false"
             android:text="더 때리기"
@@ -138,8 +139,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/btn_punch_done"
-        android:layout_width="118dp"
-        android:layout_height="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="24dp"
         android:background="@drawable/border_bcbfc3_20"
@@ -151,6 +152,8 @@
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginEnd="10dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginBottom="13dp"
             android:src="@drawable/arrow_right"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -163,6 +166,7 @@
             android:fontFamily="@font/nanum_bold"
             android:includeFontPadding="false"
             android:text="이제 됐어!"
+            app:layout_goneMarginStart="2dp"
             android:textColor="@color/white"
             android:textSize="17sp"
             app:layout_constraintBottom_toBottomOf="parent"
