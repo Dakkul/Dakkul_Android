@@ -10,7 +10,7 @@ import com.example.dakkul.databinding.FragmentResultBinding
 
 class ResultFragment : Fragment() {
     private var _binding: FragmentResultBinding? = null
-    private val binding get() = _binding ?: error("binding이 초기화 되지 않았습니다")\
+    private val binding get() = _binding ?: error("binding이 초기화 되지 않았습니다")
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
