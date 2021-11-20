@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
+import androidx.navigation.Navigation
 import com.example.dakkul.R
 import com.example.dakkul.databinding.FragmentStoryDialogBinding
 
@@ -31,6 +32,9 @@ class StoryDialogFragment : DialogFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.btnRevenge.setOnClickListener {
+            Navigation.createNavigateOnClickListener(R.id.punchFragment, null)
+        }
     }
 
     override fun onDestroyView() {
