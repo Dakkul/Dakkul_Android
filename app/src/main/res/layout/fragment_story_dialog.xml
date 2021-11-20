@@ -10,9 +10,20 @@
     tools:context=".ui.story.StoryDialogFragment">
 
     <ImageView
-        android:id="@+id/iv_graphic"
+        android:id="@+id/iv_quit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:src="@drawable/ic_quit"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_graphic"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="28dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -22,42 +33,61 @@
         android:id="@+id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:layout_marginTop="7dp"
+        android:fontFamily="@font/nanum_extra_bold"
+        android:gravity="center_horizontal"
+        android:lineSpacingExtra="11sp"
+        android:textColor="#252525"
+        android:textSize="14sp"
+        android:textStyle="normal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_graphic" />
+        app:layout_constraintTop_toBottomOf="@+id/iv_graphic"
+        tools:text="ctrl+s 안누름.." />
 
-    <com.google.android.material.chip.ChipGroup
-        android:id="@+id/cg_tag"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container_tag"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_title">
-        <com.google.android.material.chip.Chip
-            android:id="@+id/ch_pace"
-            style="@style/Widget.MaterialComponents.Chip.Action"
+
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:textStartPadding="15dp"
-            app:textEndPadding="15dp"
-            android:textStyle="normal"
-            android:textSize="12sp"/>
-    </com.google.android.material.chip.ChipGroup>
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     <TextView
         android:id="@+id/tv_story"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:fontFamily="@font/nanum_bold"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="@color/dakkul_838383"
+        android:lineSpacingExtra="9sp"
+        android:gravity="center_horizontal"
+        tools:text="마감 10분 전, 열심히 작업 중이던 나.\n
+갑자기 화면이 재시동되는데,\n
+나.. ctrl+s 눌렀나..?"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cg_tag" />
+        app:layout_constraintTop_toBottomOf="@+id/container_tag" />
 
     <ImageView
         android:id="@+id/iv_wanted"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/btn_revenge"
+        android:layout_width="194dp"
+        android:layout_height="194dp"
+        android:layout_marginHorizontal="67dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_story"
@@ -65,10 +95,16 @@
 
     <Button
         android:id="@+id/btn_revenge"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:layout_marginHorizontal="90dp"
         android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_wanted" />
+
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
