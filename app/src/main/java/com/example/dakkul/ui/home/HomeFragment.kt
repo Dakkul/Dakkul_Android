@@ -1,16 +1,24 @@
 package com.example.dakkul.ui.home
 
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.core.view.children
 import androidx.fragment.app.Fragment
+import com.example.dakkul.data.RetrofitBuilder
 import com.example.dakkul.data.Story
+import com.example.dakkul.data.StoryResponse
 import com.example.dakkul.databinding.FragmentHomeBinding
 import com.example.dakkul.ui.home.adapter.HomeRVAdapter
 import com.example.dakkul.ui.story.StoryDialogFragment
 import com.google.android.material.chip.Chip
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class HomeFragment : Fragment() {
     private lateinit var binding: FragmentHomeBinding
@@ -34,7 +42,7 @@ class HomeFragment : Fragment() {
                     if (binding.chipHomeAll.isChecked) {
                         binding.chipHomeAll.isChecked = false
                     }
-                    if(binding.cgHomeTag.checkedChipIds.size > 3) {
+                    if (binding.cgHomeTag.checkedChipIds.size > 3) {
                         it.isChecked = false
                     }
                 } else {
@@ -48,25 +56,53 @@ class HomeFragment : Fragment() {
     }
 
     private fun initAdapter() {
-        val testList = listOf<Int>()
+
         homeRVAdapter = HomeRVAdapter()
-        homeRVAdapter.itemList.addAll(
-            listOf(
-                // 서버에서 data 받아 와서 추가
-                Story("", "", "", testList),
-                Story("", "", "", testList),
-                Story("", "", "", testList),
-                Story("", "", "", testList)
-            )
-        )
-        homeRVAdapter.setItemClickListener(object :HomeRVAdapter.ItemClickListener{
+
+        initAPI()
+//        homeRVAdapter.itemList.addAll(
+//            listOf(
+//                // 서버에서 data 받아 와서 추가
+//                Story("", "", "", testList),
+//                Story("", "", "", testList),
+//                Story("", "", "", testList),
+//                Story("", "", "", testList)
+//            )
+//        )
+        homeRVAdapter.setItemClickListener(object : HomeRVAdapter.ItemClickListener {
             override fun onClick(view: View, position: Int) {
                 StoryDialogFragment(id).show(
-                    parentFragmentManager,  "StoryDialogFragment"
+                    parentFragmentManager, "StoryDialogFragment"
                 )
             }
         })
 
         binding.rvHomeTargetList.adapter = homeRVAdapter
+    }
+
+    private fun initAPI() {
+        val call: Call<StoryResponse> = RetrofitBuilder.dakkulAPI.getStory()
+
+        call.enqueue(object : Callback<StoryResponse> {
+            override fun onResponse(
+                call: Call<StoryResponse>,
+                response: Response<StoryResponse>,
+            ) {
+                if (response.isSuccessful) {
+                    val data = response.body()?.data
+                    if (data != null) {
+                        homeRVAdapter.itemList.addAll(
+                            data
+                        )
+                    }
+                } else {
+
+                }
+            }
+
+            override fun onFailure(call: Call<StoryResponse>, t: Throwable) {
+                Log.e("NetworkTest", "error:$t")
+            }
+        })
     }
 }
