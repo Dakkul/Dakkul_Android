@@ -40,4 +40,10 @@ class ResultFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
+
+    private fun btnClickSet(){
+        binding.ivRevengeEnd.setOnClickListener {
+
+        }
+    }
 }
