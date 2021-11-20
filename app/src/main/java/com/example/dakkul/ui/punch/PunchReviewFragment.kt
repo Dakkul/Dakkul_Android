@@ -8,9 +8,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.widget.addTextChangedListener
+import androidx.navigation.fragment.findNavController
 import com.example.dakkul.R
+import com.example.dakkul.data.RetrofitBuilder
 import com.example.dakkul.databinding.FragmentPunchBinding
 import com.example.dakkul.databinding.FragmentPunchReviewBinding
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers.IO
+import kotlinx.coroutines.Dispatchers.Main
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 
 class PunchReviewFragment : Fragment() {
@@ -28,6 +35,10 @@ class PunchReviewFragment : Fragment() {
     }
 
     private fun setListeners(){
+        binding.imgBtnPunchReviewBack.setOnClickListener {
+            findNavController().navigate(R.id.action_punchReviewFragment_to_homeFragment)
+        }
+
         binding.etPunchReview.addTextChangedListener(object :TextWatcher{
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
             }
@@ -42,6 +53,21 @@ class PunchReviewFragment : Fragment() {
             }
 
         })
+
+        binding.btnPunchDone.setOnClickListener {
+            CoroutineScope(IO).launch {
+                RetrofitBuilder.dakkulAPI.setPost(binding.etPunchReview.text.toString(),3)
+                withContext(Main){
+
+                }
+            }
+
+
+
+        }
+        binding.btnPunchReturn.setOnClickListener {
+            findNavController().popBackStack()
+        }
     }
 
 
