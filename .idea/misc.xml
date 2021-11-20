@@ -22,9 +22,14 @@
         <entry key="..\:/android_hyein/AndroidProject/Dakkul_Android/app/src/main/res/layout/fragment_stroy_dialog.xml" value="0.25364583333333335" />
 >>>>>>> 0799833919f56057acbdc7303fd28f3244c2412f
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.35833333333333334" />
+<<<<<<< HEAD
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.19739583333333333" />
         <entry key="app/src/main/res/layout/fragment_punch.xml" value="0.2733500113691425" />
         <entry key="app/src/main/res/layout/fragment_punch_review.xml" value="0.25" />
+=======
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.27887423364907865" />
+        <entry key="app/src/main/res/layout/item_home_rv.xml" value="0.13858695652173914" />
+>>>>>>> f7f7632e4da7b06019cf6cbbefe8ba375f5723f6
       </map>
     </option>
   </component>
