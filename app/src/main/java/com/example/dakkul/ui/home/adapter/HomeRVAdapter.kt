@@ -24,7 +24,7 @@ class HomeRVAdapter : RecyclerView.Adapter<HomeRVAdapter.HomeViewViewHolder>() {
                 binding.tvTag3.isInvisible = true
             }
             Glide.with(binding.ivStoryImage.context)
-                .load(data.emoji)
+                .load(data.imageBefore)
                 .into(binding.ivStoryImage)
         }
     }
