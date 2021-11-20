@@ -8,7 +8,8 @@
         <entry key="app/src/main/res/drawable/shape_home_chip_selected.xml" value="0.2671794871794872" />
         <entry key="app/src/main/res/drawable/shape_home_chip_unselected.xml" value="0.2671794871794872" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.35833333333333334" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.7462782557278254" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.648578811369509" />
+        <entry key="app/src/main/res/layout/item_home_rv.xml" value="0.18297101449275363" />
       </map>
     </option>
   </component>
