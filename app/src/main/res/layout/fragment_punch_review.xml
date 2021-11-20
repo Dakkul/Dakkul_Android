@@ -17,16 +17,23 @@
         android:id="@+id/imgBtn_punch_review_back"
         android:layout_width="24dp"
         android:layout_height="24dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_quit"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:src="@tools:sample/avatars" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_punch_review_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="136dp"
-        android:text="TextView"
+        android:layout_marginTop="98dp"
+        android:text="최후의 한마디 남기기"
+        android:textSize="24sp"
+        android:fontFamily="@font/nanum_extra_bold"
+        android:includeFontPadding="false"
+        android:textColor="@color/dakkul_252525"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,9 +41,11 @@
 
     <ImageView
         android:id="@+id/img_punch_image"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
+        android:layout_marginStart="83dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="83dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.466"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,11 +54,18 @@
 
     <EditText
         android:id="@+id/et_punch_review"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="20dp"
+        android:maxLines="1"
+        android:hint="최후의 한 마디를 남겨보세요!"
+        android:paddingStart="8dp"
+        android:background="@drawable/border_f4f4f5_20"
+        android:paddingVertical="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:maxLines="1"
         app:layout_constraintTop_toBottomOf="@+id/img_punch_image" />
 
     <TextView
@@ -57,6 +73,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="123"
+        android:textSize="14sp"
+        android:fontFamily="@font/nanum_regular"
+        android:includeFontPadding="false"
+        android:textColor="@color/dakkul_ff5c5c"
         app:layout_constraintBottom_toBottomOf="@+id/tv_punch_review_count_max"
         app:layout_constraintEnd_toStartOf="@+id/tv_punch_review_count_max" />
 
@@ -64,22 +84,31 @@
         android:id="@id/tv_punch_review_count_max"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="sdfff"
+        android:layout_marginTop="4dp"
+        android:text=" / 20"
+        android:textSize="14sp"
+        android:fontFamily="@font/nanum_regular"
+        android:includeFontPadding="false"
+        android:textColor="@color/dakkul_919196"
         app:layout_constraintEnd_toEndOf="@+id/et_punch_review"
         app:layout_constraintTop_toBottomOf="@+id/et_punch_review" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_punch_return"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="24dp"
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_punch_done"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="24dp"
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
