@@ -10,7 +10,7 @@ import androidx.navigation.Navigation
 import com.example.dakkul.R
 import com.example.dakkul.databinding.FragmentStoryDialogBinding
 
-class StoryDialogFragment : DialogFragment() {
+class StoryDialogFragment(id: Int) : DialogFragment() {
     private var _binding: FragmentStoryDialogBinding? = null
     private val binding get() = _binding ?: error("binding이 초기화 되지 않았습니다")
 
