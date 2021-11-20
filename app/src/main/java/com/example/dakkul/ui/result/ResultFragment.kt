@@ -40,34 +40,4 @@ class ResultFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-
-    private fun textColorSet(){
-        val content: String = binding.tvPeople.text.toString()
-        val spannableString = SpannableString(content)
-
-        val word = "안드로이드"
-        val start = content.indexOf(word)
-        val end = start + word.length
-
-        spannableString.setSpan(
-            ForegroundColorSpan(Color.parseColor("#FF6702")),
-            start,
-            end,
-            Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
-        )
-        spannableString.setSpan(
-            StyleSpan(Typeface.BOLD),
-            start,
-            end,
-            Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
-        )
-        spannableString.setSpan(
-            RelativeSizeSpan(1.3f),
-            start,
-            end,
-            SpannableString.SPAN_EXCLUSIVE_EXCLUSIVE
-        )
-
-        binding.tvPeople.text
-    }
 }
