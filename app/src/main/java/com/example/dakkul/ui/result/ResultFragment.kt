@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import com.example.dakkul.R
 import com.example.dakkul.databinding.FragmentResultBinding
 
@@ -30,7 +31,7 @@ class ResultFragment : Fragment() {
 
     private fun btnClickSet(){
         binding.ivRevengeEnd.setOnClickListener {
-            Navigation.createNavigateOnClickListener(R.id.homeFragment, null)
+            //findNavController().navigate(R.id.)
         }
     }
 }

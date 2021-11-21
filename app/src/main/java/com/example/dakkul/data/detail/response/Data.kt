@@ -5,7 +5,6 @@ data class Data(
     val imageBefore: String,
     val id: Int,
     val imageWanted: String,
-    val imageBefore: String,
     val imageAfter: String,
     val tags: List<Tag>,
     val title: String,
