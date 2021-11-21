@@ -22,7 +22,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="ctrl+s가 주겄습니다" />
+        android:text="ctrl+s가 주겄습니다" />
 
     <TextView
         android:id="@+id/tv_people"

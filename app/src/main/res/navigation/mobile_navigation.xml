@@ -33,6 +33,18 @@
         android:name="com.example.dakkul.ui.punch.PunchFragment"
         android:label="fragment_punch"
         tools:layout="@layout/fragment_punch" >
+        <argument
+            android:name="before"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="after"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="keyword"
+            android:defaultValue=""
+            app:argType="string" />
         <action
             android:id="@+id/action_punchFragment_to_punchReviewFragment"
             app:destination="@id/punchReviewFragment" />
@@ -41,6 +53,10 @@
         android:id="@+id/punchReviewFragment"
         android:name="com.example.dakkul.ui.punch.PunchReviewFragment"
         android:label="PunchReviewFragment" >
+        <argument
+            android:name="after"
+            android:defaultValue=""
+            app:argType="string" />
         <action
             android:id="@+id/action_punchReviewFragment_to_resultFragment"
             app:destination="@id/resultFragment" />
@@ -53,5 +69,10 @@
         android:id="@+id/storyDialogFragment"
         android:name="com.example.dakkul.ui.story.StoryDialogFragment"
         android:label="fragment_story_dialog"
-        tools:layout="@layout/fragment_story_dialog" />
+        tools:layout="@layout/fragment_story_dialog" >
+
+        <action
+            android:id="@+id/action_storyDialogFragment_to_punchFragment"
+            app:destination="@id/punchFragment" />
+    </fragment>
 </navigation>

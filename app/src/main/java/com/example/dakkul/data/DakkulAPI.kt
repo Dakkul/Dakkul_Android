@@ -26,8 +26,8 @@ interface DakkulAPI {
         @Path("postId") postId : Int
     ) : Call<ResponseDetail>
 
-    @GET("/api/comment/list/{postId}")
+    /*@GET("/api/comment/list/{postId}")
     fun getResult(
         @Path("postId") postId : Int
-    ) : Call<ResponseDetail>
+    ) : Call<ResponseDetail>*/
 }
