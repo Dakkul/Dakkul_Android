@@ -4,11 +4,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/frameLayout"
-    android:layout_marginHorizontal="20dp"
-    android:layout_marginVertical="100dp"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_gravity="center"
+    android:layout_width="320dp"
+    android:layout_height="560dp"
+    android:background="@drawable/border_ffffff_8_fill"
     tools:context=".ui.story.StoryDialogFragment">
 
     <ImageView
@@ -93,12 +91,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_story" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/btn_revenge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        android:layout_marginBottom="32dp"
+        android:background="@android:color/transparent"
         android:src="@drawable/btn_revenge_start"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iv_wanted" />

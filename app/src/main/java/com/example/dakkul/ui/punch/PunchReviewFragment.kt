@@ -8,7 +8,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.widget.addTextChangedListener
+import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
+import com.bumptech.glide.Glide
 import com.example.dakkul.R
 import com.example.dakkul.data.RetrofitBuilder
 import com.example.dakkul.databinding.FragmentPunchBinding
@@ -23,6 +26,7 @@ import kotlinx.coroutines.withContext
 class PunchReviewFragment : Fragment() {
 
     lateinit var binding: FragmentPunchReviewBinding
+    private val args by navArgs<PunchFragmentArgs>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -31,7 +35,13 @@ class PunchReviewFragment : Fragment() {
         // Inflate the layout for this fragment
         binding = FragmentPunchReviewBinding.inflate(inflater,container,false)
         setListeners()
+        setview()
         return binding.root
+    }
+    private fun setview(){
+        Glide.with(requireContext())
+                .load(args.after)
+                .into(binding.imgPunchImage)
     }
 
     private fun setListeners(){
@@ -46,6 +56,7 @@ class PunchReviewFragment : Fragment() {
             override fun onTextChanged(s: CharSequence?, p1: Int, p2: Int, p3: Int) {
                 var userinput = binding.etPunchReview.text.toString()
                 binding.tvPunchReviewCount.text = userinput.length.toString()
+
             }
 
             override fun afterTextChanged(p0: Editable?) {
@@ -55,14 +66,19 @@ class PunchReviewFragment : Fragment() {
         })
 
         binding.btnPunchDone.setOnClickListener {
-            CoroutineScope(IO).launch {
-                RetrofitBuilder.dakkulAPI.setPost(binding.etPunchReview.text.toString(),3)
-                withContext(Main){
+            //CoroutineScope(IO).launch {
+            //    val response = RetrofitBuilder.dakkulAPI.setPost(binding.etPunchReview.text.toString(),3)
+            //    withContext(Main){
+            //        if(response.status==200) {
+            //            findNavController().navigate(R.id.action_punchReviewFragment_to_resultFragment)
+            //        }else{
+            //
+            //        }
 
-                }
-            }
+            //    }
+            //}
 
-
+            findNavController().navigate(R.id.action_punchReviewFragment_to_resultFragment)
 
         }
         binding.btnPunchReturn.setOnClickListener {

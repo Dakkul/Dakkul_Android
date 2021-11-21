@@ -8,12 +8,14 @@ import android.view.ViewGroup
 import androidx.core.view.children
 import androidx.core.view.size
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.dakkul.data.RetrofitBuilder
 import com.example.dakkul.data.StoryRequest
 import com.example.dakkul.data.StoryResponse
 import com.example.dakkul.databinding.FragmentHomeBinding
 import com.example.dakkul.ui.home.adapter.HomeRVAdapter
 import com.example.dakkul.ui.story.StoryDialogFragment
+import com.example.dakkul.ui.story.StoryDialogFragmentDirections
 import com.google.android.material.chip.Chip
 import retrofit2.Call
 import retrofit2.Callback
