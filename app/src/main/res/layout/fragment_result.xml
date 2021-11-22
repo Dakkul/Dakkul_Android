@@ -1,28 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="vm"
+            type="com.example.dakkul.ui.punch.PunchViewModel" />
+
+    </data>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/dakkul_252525"
     tools:context=".ui.result.ResultFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_pattern_gray">
+
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="60dp"
+        android:background="#B3252525"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_people2"
+        tools:src="@tools:sample/avatars" />
 
 
     <TextView
         android:id="@+id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="24dp"
         android:fontFamily="@font/nanum_extra_bold"
         android:gravity="center_horizontal"
         android:lineSpacingExtra="12sp"
+        android:text="ctrl+s가 주겄습니다"
         android:textColor="@color/white"
         android:textSize="24sp"
         android:textStyle="normal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:text="ctrl+s가 주겄습니다" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_people"
@@ -35,178 +61,255 @@
         android:textColor="@color/white"
         android:lineSpacingExtra="8sp"
         android:gravity="center_horizontal"
-        tools:text="오늘 45,253명이
-\n함께 이 불운을 겪고 퇴치했어요"
+        android:text="오늘 45,253명이"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_title" />
-
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/container_message"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="30dp"
+    <TextView
+        android:id="@+id/tv_people2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:fontFamily="@font/nanum_bold"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:lineSpacingExtra="8sp"
+        android:gravity="center_horizontal"
+        android:text="함께 이 불운을 겪고 퇴치했어요"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/iv_revenge_end"
-        app:layout_constraintTop_toBottomOf="@+id/tv_people">
+        app:layout_constraintTop_toBottomOf="@+id/tv_people" />
 
-        <TextView
-            android:id="@+id/tv_1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="31dp"
-            android:layout_marginStart="34dp"
-            android:fontFamily="@font/nanum_bold"
-            android:paddingHorizontal="12dp"
-            android:paddingVertical="10dp"
-            android:background="@drawable/border_ffffff_20"
-            android:textStyle="normal"
-            android:textSize="16sp"
-            android:textColor="#838383"
-            android:lineSpacingExtra="2sp"
-            android:text="하...................."
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/container_message" />
 
-        <TextView
-            android:id="@+id/tv_2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="63dp"
-            android:layout_marginStart="117dp"
-            android:fontFamily="@font/nanum_bold"
-            android:paddingHorizontal="12dp"
-            android:paddingVertical="10dp"
-            android:background="@drawable/border_ffffff_20"
-            android:textStyle="normal"
-            android:textSize="16sp"
-            android:textColor="#838383"
-            android:lineSpacingExtra="2sp"
-            android:text="ㅋㅋ아 이거 맞냐고"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/container_message" />
+    <TextView
+        android:id="@+id/tv_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="44dp"
+        android:background="@drawable/border_ffffff_20"
+        android:fontFamily="@font/nanum_bold"
+        android:lineSpacingExtra="2sp"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="10dp"
+        android:text="하...................."
+        android:textColor="#838383"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@+id/tv_3"
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <TextView
-            android:id="@+id/tv_3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="113dp"
-            android:layout_marginStart="59dp"
-            android:fontFamily="@font/nanum_bold"
-            android:paddingHorizontal="12dp"
-            android:paddingVertical="10dp"
-            android:background="@drawable/border_ffffff_20"
-            android:textStyle="normal"
-            android:textSize="16sp"
-            android:textColor="#838383"
-            android:lineSpacingExtra="2sp"
-            android:text="나 눌렀는디"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/container_message" />
+    <TextView
+        android:id="@+id/tv_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="117dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/border_ffffff_20"
+        android:fontFamily="@font/nanum_bold"
+        android:lineSpacingExtra="2sp"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="10dp"
+        android:text="ㅋㅋ아 이거 맞냐고"
+        android:textColor="#838383"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@+id/tv_3"
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <TextView
-            android:id="@+id/tv_4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="132dp"
-            android:layout_marginStart="146dp"
-            android:fontFamily="@font/nanum_bold"
-            android:paddingHorizontal="12dp"
-            android:paddingVertical="10dp"
-            android:background="@drawable/border_ffffff_20"
-            android:textStyle="normal"
-            android:textSize="16sp"
-            android:textColor="#838383"
-            android:lineSpacingExtra="2sp"
-            android:text="교수님 절 용서하세요"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/container_message" />
+    <TextView
+        android:id="@+id/tv_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="59dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/border_ffffff_20"
+        android:fontFamily="@font/nanum_bold"
+        android:lineSpacingExtra="2sp"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="10dp"
+        android:text="나 눌렀는디"
+        android:textColor="#838383"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@+id/tv_5"
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <TextView
-            android:id="@+id/tv_5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="191dp"
-            android:layout_marginStart="91dp"
-            android:fontFamily="@font/nanum_bold"
-            android:paddingHorizontal="12dp"
-            android:paddingVertical="10dp"
-            android:background="@drawable/border_ffffff_20"
-            android:textStyle="normal"
-            android:textSize="16sp"
-            android:textColor="#838383"
-            android:lineSpacingExtra="2sp"
-            android:text="아니 눌렀는데 왜 안눌려"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/container_message" />
+    <TextView
+        android:id="@+id/tv_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="21dp"
+        android:background="@drawable/border_ffffff_20"
+        android:fontFamily="@font/nanum_bold"
+        android:lineSpacingExtra="2sp"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="10dp"
+        android:text="교수님 절 용서하세요"
+        android:textColor="#838383"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@+id/tv_5"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-        <TextView
-            android:id="@+id/tv_6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="246dp"
-            android:layout_marginStart="35dp"
-            android:fontFamily="@font/nanum_bold"
-            android:paddingHorizontal="12dp"
-            android:paddingVertical="10dp"
-            android:background="@drawable/border_ffffff_20"
-            android:textStyle="normal"
-            android:textSize="16sp"
-            android:textColor="#838383"
-            android:lineSpacingExtra="2sp"
-            android:text="키보드랑 맞짱뜰거임"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/container_message" />
+    <TextView
+        android:id="@+id/tv_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:layout_marginBottom="17dp"
+        android:background="@drawable/border_ffffff_20"
+        android:fontFamily="@font/nanum_bold"
+        android:lineSpacingExtra="2sp"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="10dp"
+        android:text="아니 눌렀는데 왜 안눌려"
+        android:textColor="#838383"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@+id/tv_6"
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <TextView
-            android:id="@+id/tv_7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="298dp"
-            android:layout_marginStart="134dp"
-            android:fontFamily="@font/nanum_bold"
-            android:paddingHorizontal="12dp"
-            android:paddingVertical="10dp"
-            android:background="@drawable/border_ffffff_20"
-            android:textStyle="normal"
-            android:textSize="16sp"
-            android:textColor="#838383"
-            android:lineSpacingExtra="2sp"
-            android:text="아 진짜 개빡ㅈ디러ㅏㅓ민"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/container_message" />
+    <TextView
+        android:id="@+id/tv_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginBottom="14dp"
+        android:background="@drawable/border_ffffff_20"
+        android:fontFamily="@font/nanum_bold"
+        android:lineSpacingExtra="2sp"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="10dp"
+        android:text="키보드랑 맞짱뜰거임"
+        android:textColor="#838383"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@+id/tv_7"
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <TextView
-            android:id="@+id/tv_8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="97dp"
-            android:layout_marginTop="377dp"
-            android:background="@drawable/border_ffffff_20"
-            android:fontFamily="@font/nanum_bold"
-            android:lineSpacingExtra="2sp"
-            android:paddingHorizontal="12dp"
-            android:paddingVertical="10dp"
-            android:text="컴퓨터 부셔버려........."
-            android:textColor="@color/dakkul_ff5c5c"
-            android:textSize="16sp"
-            android:textStyle="normal"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/container_message" />
+    <TextView
+        android:id="@+id/tv_7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="33dp"
+        android:layout_marginBottom="44dp"
+        android:background="@drawable/border_ffffff_20"
+        android:fontFamily="@font/nanum_bold"
+        android:lineSpacingExtra="2sp"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="10dp"
+        android:text="아 진짜 개빡ㅈ디러ㅏㅓ민"
+        android:textColor="#838383"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@+id/tv_8"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/tv_8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="97dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/border_ffffff_20"
+        android:fontFamily="@font/nanum_bold"
+        android:lineSpacingExtra="2sp"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="10dp"
+        android:text="컴퓨터 부셔버려........."
+        android:textColor="@color/dakkul_ff5c5c"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@+id/iv_revenge_end"
+        app:layout_constraintEnd_toEndOf="parent" />
+
 
     <ImageView
         android:id="@+id/iv_revenge_end"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="36dp"
         android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
         android:src="@drawable/btn_revenge_finish"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/container_message" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/vector_21"
+        app:layout_constraintEnd_toEndOf="@+id/tv_8"
+        app:layout_constraintTop_toBottomOf="@+id/tv_8" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/vector_22"
+        app:layout_constraintStart_toStartOf="@+id/tv_7"
+        app:layout_constraintTop_toBottomOf="@+id/tv_7" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/vector_22"
+        app:layout_constraintStart_toStartOf="@+id/tv_6"
+        app:layout_constraintTop_toBottomOf="@+id/tv_6" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/vector_22"
+        app:layout_constraintStart_toStartOf="@+id/tv_5"
+        app:layout_constraintTop_toBottomOf="@+id/tv_5" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/vector_21"
+        app:layout_constraintEnd_toEndOf="@+id/tv_4"
+        app:layout_constraintTop_toBottomOf="@+id/tv_4" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/vector_22"
+        app:layout_constraintStart_toStartOf="@+id/tv_3"
+        app:layout_constraintTop_toBottomOf="@+id/tv_3" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/vector_22"
+        app:layout_constraintStart_toStartOf="@+id/tv_1"
+        app:layout_constraintTop_toBottomOf="@+id/tv_1" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/vector_22"
+        app:layout_constraintStart_toStartOf="@+id/tv_2"
+        app:layout_constraintTop_toBottomOf="@+id/tv_2" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

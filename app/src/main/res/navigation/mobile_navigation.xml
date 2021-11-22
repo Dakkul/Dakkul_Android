@@ -22,6 +22,10 @@
         android:name="com.example.dakkul.ui.result.ResultFragment"
         android:label="fragment_result"
         tools:layout="@layout/fragment_result" >
+        <argument
+            android:name="after"
+            android:defaultValue=""
+            app:argType="string" />
         <action
             android:id="@+id/action_resultFragment_to_homeFragment"
             app:destination="@id/homeFragment"
