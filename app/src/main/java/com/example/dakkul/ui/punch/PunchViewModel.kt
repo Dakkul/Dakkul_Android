@@ -8,8 +8,10 @@ class PunchViewModel:ViewModel() {
 
 
     val isClick=MutableLiveData<Boolean>()
+    val isEdit=MutableLiveData<Boolean>()
 
     init{
         isClick.value=false
+        isEdit.value=false
     }
 }

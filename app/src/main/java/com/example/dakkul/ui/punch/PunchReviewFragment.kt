@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.widget.addTextChangedListener
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
@@ -27,6 +28,7 @@ class PunchReviewFragment : Fragment() {
 
     lateinit var binding: FragmentPunchReviewBinding
     private val args by navArgs<PunchFragmentArgs>()
+    private val viewModel:PunchViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -34,6 +36,8 @@ class PunchReviewFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentPunchReviewBinding.inflate(inflater,container,false)
+        binding.vm=viewModel
+        binding.lifecycleOwner=viewLifecycleOwner
         setListeners()
         setview()
         return binding.root
@@ -56,6 +60,7 @@ class PunchReviewFragment : Fragment() {
             override fun onTextChanged(s: CharSequence?, p1: Int, p2: Int, p3: Int) {
                 var userinput = binding.etPunchReview.text.toString()
                 binding.tvPunchReviewCount.text = userinput.length.toString()
+                viewModel.isEdit.value = userinput.isNotEmpty()
 
             }
 
@@ -66,20 +71,19 @@ class PunchReviewFragment : Fragment() {
         })
 
         binding.btnPunchDone.setOnClickListener {
-            //CoroutineScope(IO).launch {
-            //    val response = RetrofitBuilder.dakkulAPI.setPost(binding.etPunchReview.text.toString(),3)
-            //    withContext(Main){
-            //        if(response.status==200) {
-            //            findNavController().navigate(R.id.action_punchReviewFragment_to_resultFragment)
-            //        }else{
-            //
-            //        }
+            /*CoroutineScope(IO).launch {
+                val response = RetrofitBuilder.dakkulAPI.setPost(binding.etPunchReview.text.toString(),1)
+                withContext(Main){
+                    if(response.status==200) {
+                        findNavController().navigate(PunchFragmentDirections.actionPunchFragmentToPunchReviewFragment(args.after))
+                    }else{
 
-            //    }
-            //}
+                    }
 
-            findNavController().navigate(R.id.action_punchReviewFragment_to_resultFragment)
+                }
+            }*/
 
+            findNavController().navigate(PunchReviewFragmentDirections.actionPunchReviewFragmentToResultFragment(args.after))
         }
         binding.btnPunchReturn.setOnClickListener {
             findNavController().popBackStack()

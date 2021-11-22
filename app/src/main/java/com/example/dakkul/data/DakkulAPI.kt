@@ -8,7 +8,7 @@ import retrofit2.http.*
 
 interface DakkulAPI {
 
-    @POST("/api/{comment}/create")
+    @POST("/api/{comment}/create?postId=")
     suspend fun setPost(
             @Path("comment") comment: String,
             @Query("postId") postId: Int
@@ -28,8 +28,8 @@ interface DakkulAPI {
         @Path("postId") postId : Int
     ) : Call<ResponseDetail>
 
-    /*@GET("/api/comment/list/{postId}")
-    fun getResult(
+    @GET("/api/comment/list/{postId}")
+    suspend fun getResult(
         @Path("postId") postId : Int
-    ) : Call<ResponseDetail>*/
+    ) : ResultResponse
 }
